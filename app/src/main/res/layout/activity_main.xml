@@ -283,7 +283,7 @@ android:textAlignment="viewEnd"
 
             <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/carView6"
+                android:id="@+id/carView5"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_margin="8dp"
