@@ -6,4 +6,24 @@
     </style>
 
     <style name="Theme.ZenCode" parent="Base.Theme.ZenCode" />
+    <style name="operatorbutton" parent="commonbutton">
+        <item name="android:textColor">@color/btnBackground2</item>
+    </style>
+
+    <style name="digitbutton" parent="commonbutton">
+
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="commonbutton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_margin">12dp</item>
+
+
+    </style>
 </resources>

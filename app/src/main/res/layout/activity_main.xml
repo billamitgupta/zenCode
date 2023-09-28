@@ -1,18 +1,656 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/btnBackground2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:text="NS:- NOT SURE \nDWS:=DON'T WANT TO SHARE"
+android:textAlignment="viewEnd"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                android:textColorHighlight="@color/linecolor"
+
+
+                cardView:layout_constraintBottom_toTopOf="parent"
+
+                cardView:layout_constraintTop_toTopOf="@+id/carView"
+                >
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q1-)Do You feel overwhelmed by your work"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+
+                    android:textStyle=""
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_1q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_1q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="No" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_1q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="NS" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_1q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="DWS" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carView2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q2-)Have you been sleeping properly"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+
+                    android:textStyle=""
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_2q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_2q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_2q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="NS" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_2q4"
+                        style="@style/operatorbutton"
+                        android:layout_width="72dp"
+                        android:onClick="onDigitClick"
+                        android:text="DWS" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carView3"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q3-)Have you noticed any triggers that seen to affect your mood."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+
+                    android:textStyle=""
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_3q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_3q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_3q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="Ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_3q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView4"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q4-)do you enjay what you do."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+
+                    android:textStyle=""
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_4q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_4q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_4q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_4q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView6"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q5-)do you have any concern or worries that keep you up at night."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+
+                    android:textColor="@android:color/black"
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_5q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_5q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_5q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_5q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView6"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q6-)do you enjoy what you do."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+
+                    android:textColor="@android:color/black"
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_6q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_6q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_6q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_6q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView7"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q7-)Have you practising any mindfulness or relation techniques lately."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+
+                    android:textColor="@android:color/black"
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_7q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_7q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_7q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_7q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView8"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q8-)do you have any concern or worries that keep you up at night."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+
+                    android:textColor="@android:color/black"
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_8q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_8q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_8q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_8q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView9"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q9-)do you have any concern or worries that keep you up at night."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+
+                    android:textColor="@android:color/black"
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_9q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_9q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_9q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_9q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView xmlns:cardView="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/carView10"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                cardView:cardBackgroundColor="@color/linecolor"
+                cardView:cardCornerRadius="8dp"
+                cardView:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/title10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:lines="4"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+
+                    android:text="Q10-)do you have any concern or worries that keep you up at night."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+
+                    android:textColor="@android:color/black"
+                    cardView:layout_constraintVertical_bias="0.266" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_10q1"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+
+                        android:text="yes" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_10q2"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="no" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_10q3"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="ns" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_10q4"
+                        style="@style/operatorbutton"
+                        android:onClick="onDigitClick"
+                        android:text="dws" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
